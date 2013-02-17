@@ -1,4 +1,4 @@
-#Captcha for Kohana 3.x
+#Captcha for Kohana 3.3 (Forked form https://github.com/kolanos/kohana-captcha)
 
 This is the Captcha library ported from Kohana 2.3.x to 3.x. Very little has changed API-wise, although there have been a few changes.
 
