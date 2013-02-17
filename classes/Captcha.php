@@ -20,7 +20,7 @@ abstract class Captcha
 	 */
 	protected $driver;
 
-	/**
+	/**s
 	 * @var array Default config values
 	 */
 	public static $config = array

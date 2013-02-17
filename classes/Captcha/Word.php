@@ -19,19 +19,19 @@ class Captcha_Word extends Captcha_Basic
 	public function generate_challenge()
 	{
 		// Load words from the current language and randomize them
-		$words = Kohana::config('captcha.words');
+		$words = Kohana::$config->load('captcha')->get('words');
 		shuffle($words);
 
 		// Loop over each word...
 		foreach ($words as $word)
 		{
 			// ...until we find one of the desired length
-			if (abs(Captcha::$config['complexity'] - utf8::strlen($word)) < 2)
-				return utf8::strtoupper($word);
+			if (abs(Captcha::$config['complexity'] - UTF8::strlen($word)) < 2)
+				return UTF8::strtoupper($word);
 		}
 		
 		// Return any random word as final fallback
-		return utf8::strtoupper($words[array_rand($words)]);
+		return UTF8::strtoupper($words[array_rand($words)]);
 	}
 
 } // End Captcha Word Driver Class
